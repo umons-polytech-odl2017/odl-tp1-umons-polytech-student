@@ -1,76 +1,76 @@
 package exercise3;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.withinPercentage;
 
 public class Exercise3Test {
 	@Test
-	void computeSquarePerimeter() {
+	public void computeSquarePerimeter() {
 		ConvexPolygon square = buildSquare();
 		double perimeter = Exercise3.computePerimeter(square);
 		assertThat(perimeter).isCloseTo(80.0, withinPercentage(1));
 	}
 
 	@Test
-	void computeRectanglePerimeter() {
+	public void computeRectanglePerimeter() {
 		ConvexPolygon rectangle = buildRectangle();
 		double perimeter = Exercise3.computePerimeter(rectangle);
 		assertThat(perimeter).isCloseTo(80.0, withinPercentage(1));
 	}
 
 	@Test
-	void computePolygonPerimeter() {
+	public void computePolygonPerimeter() {
 		ConvexPolygon hexagon = buildHexagon();
 		double perimeter = Exercise3.computePerimeter(hexagon);
 		assertThat(perimeter).isCloseTo(20.0 + 4.0 * Math.sqrt(50.0), withinPercentage(1));
 	}
 
 	@Test
-	void computeSquareArea() {
+	public void computeSquareArea() {
 		ConvexPolygon square = buildSquare();
 		double area = Exercise3.computeArea(square);
 		assertThat(area).isCloseTo(400, withinPercentage(1));
 	}
 
 	@Test
-	void computeRectangleArea() {
+	public void computeRectangleArea() {
 		ConvexPolygon rectangle = buildRectangle();
 		double area = Exercise3.computeArea(rectangle);
 		assertThat(area).isCloseTo(300.0, withinPercentage(1));
 	}
 
 	@Test
-	void computePolygonArea() {
+	public void computePolygonArea() {
 		ConvexPolygon hexagon = buildHexagon();
 		double area = Exercise3.computeArea(hexagon);
 		assertThat(area).isCloseTo(150.0, withinPercentage(1));
 	}
 
 	@Test
-	void computeEllipsisPerimeter() {
+	public void computeEllipsisPerimeter() {
 		Ellipsis ellipsis = buildEllipsis();
 		double perimeter = Exercise3.computePerimeter(ellipsis);
 		assertThat(perimeter).isCloseTo(2.0 * Math.PI * Math.sqrt(1450.0), withinPercentage(1));
 	}
 
 	@Test
-	void computeCirclePerimeter() {
+	public void computeCirclePerimeter() {
 		Ellipsis circle = buildCircle();
 		double perimeter = Exercise3.computePerimeter(circle);
 		assertThat(perimeter).isCloseTo(24.0 * Math.PI, withinPercentage(1));
 	}
 
 	@Test
-	void computeCircleArea() {
+	public void computeCircleArea() {
 		Ellipsis circle = buildCircle();
 		double area = Exercise3.computeArea(circle);
 		assertThat(area).isCloseTo(Math.PI * 144.0, withinPercentage(1));
 	}
 
 	@Test
-	void computeEllipsisArea() {
+	public void computeEllipsisArea() {
 		Ellipsis ellipsis = buildEllipsis();
 		double area = Exercise3.computeArea(ellipsis);
 		assertThat(area).isCloseTo(Math.PI * 100.0, withinPercentage(1));

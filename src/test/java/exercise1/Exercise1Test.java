@@ -1,7 +1,7 @@
 package exercise1;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -12,37 +12,37 @@ import java.util.Random;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
-class Exercise1Test {
+public class Exercise1Test {
 
 	private Person mannekenPis;
 
-	@BeforeEach
-	void setUp() {
+	@Before
+	public void setUp() {
 		mannekenPis = Exercise1.createPerson("Manneken Pis", 97);
 	}
 
 	@Test
-	void personIsNotNull() {
+	public void personIsNotNull() {
 		assertThat(mannekenPis).isNotNull();
 	}
 
 	@Test
-	void personClassNameIsPerson() {
+	public void personClassNameIsPerson() {
 		assertThat(mannekenPis.getClass().getName()).endsWith(".Person");
 	}
 
 	@Test
-	void personHasAName() {
+	public void personHasAName() {
 		assertGetterValue(mannekenPis, "getName", "Manneken Pis");
 	}
 
 	@Test
-	void personHasAnAge() {
+	public void personHasAnAge() {
 		assertGetterValue(mannekenPis, "getAge", 97);
 	}
 
 	@Test
-	void canCreateManyPeople() {
+	public void canCreateManyPeople() {
 		Random rnd = new Random();
 		rnd.ints(100, 1, 100)
 			.forEach(number -> {
@@ -55,7 +55,7 @@ class Exercise1Test {
 	}
 
 	@Test
-	void runningExercice1PrintsNameAndAge() {
+	public void runningExercice1PrintsNameAndAge() {
 		Random rnd = new Random();
 		PrintStream originalOut = System.out;
 		try {
