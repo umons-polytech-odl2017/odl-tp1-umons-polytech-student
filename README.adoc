@@ -1,0 +1,6 @@
+= Outils de Développement Logiciel : TP1 notions de bases, orienté objet et héritage
+François Roland <francois.roland@umons.ac.be>
+2017-10-11
+
+Ce repository sert de modèle pour créer les repositories des étudiants. Les instructions du cours se trouvent sur
+https://moodle.umons.ac.be/mod/resource/view.php?id=95212[Moodle].
